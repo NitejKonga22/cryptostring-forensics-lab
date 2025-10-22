@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔬 CryptoString Forensics Lab</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="cyber-container">
+        <!-- Animated Background -->
+        <div class="cyber-grid"></div>
+        <div class="floating-particles"></div>
+        
+        <header class="cyber-header">
+            <div class="header-content">
+                <h1 class="cyber-title">
+                    <span class="glitch" data-text="CryptoString">CryptoString</span>
+                    <span class="subtitle">Forensics Lab</span>
+                </h1>
+                <p class="cyber-description">
+                    Advanced cryptographic string analysis with pattern recognition
+                </p>
+            </div>
+        </header>
+        
+        <main class="cyber-main">
+            <!-- Input Section with Advanced Features -->
+            <div class="analysis-panel">
+                <div class="input-section">
+                    <div class="input-header">
+                        <h2>🔍 String Analysis Engine</h2>
+                        <div class="confidence-meter">
+                            <span>Confidence: </span>
+                            <div class="meter-bar">
+                                <div class="meter-fill" id="confidenceMeter"></div>
+                            </div>
+                            <span id="confidenceValue">0%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="input-container">
+                        <textarea 
+                            id="inputString" 
+                            placeholder="Enter your cryptographic string for analysis..."
+                            rows="4"
+                        ></textarea>
+                        <div class="input-actions">
+                            <button id="deepScanBtn" class="cyber-button secondary">
+                                <span class="button-text">🔬 Deep Scan</span>
+                            </button>
+                            <button id="compareBtn" class="cyber-button tertiary">
+                                <span class="button-text">⚖️ Compare</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Real-time Analysis Display -->
+                <div class="realtime-analysis" id="realtimeAnalysis">
+                    <div class="analysis-grid">
+                        <div class="analysis-card">
+                            <h3>🧠 Neural Analysis</h3>
+                            <div class="neural-output" id="neuralOutput">Ready for analysis...</div>
+                        </div>
+                        <div class="analysis-card">
+                            <h3>📊 Statistical Fingerprint</h3>
+                            <div class="stats-display" id="statsDisplay">Waiting for input...</div>
+                        </div>
+                        <div class="analysis-card">
+                            <h3>🔐 Cryptographic Signature</h3>
+                            <div class="crypto-signature" id="cryptoSignature">No signature detected</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Advanced Results Section -->
+            <div class="results-section" id="resultsSection" style="display: none;">
+                <div class="results-header">
+                    <h2>🎯 Analysis Results</h2>
+                    <div class="result-confidence">
+                        <span class="confidence-label">Overall Confidence:</span>
+                        <div class="confidence-badge" id="overallConfidence">Analyzing...</div>
+                    </div>
+                </div>
+                
+                <div class="results-grid">
+                    <!-- Primary Classification -->
+                    <div class="result-card primary" id="primaryResult">
+                        <div class="card-header">
+                            <h3>🎯 Primary Classification</h3>
+                            <div class="confidence-indicator" id="primaryConfidence"></div>
+                        </div>
+                        <div class="card-content" id="primaryContent">
+                            <div class="classification-result">
+                                <div class="result-icon">🔍</div>
+                                <div class="result-text">Analyzing...</div>
+                            </div>
+                            <div class="result-narrative" id="resultNarrative"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Neural Analysis -->
+                    <div class="result-card" id="neuralAnalysis">
+                        <div class="card-header">
+                            <h3>🧠 Neural Analysis</h3>
+                            <div class="confidence-indicator" id="neuralConfidence"></div>
+                        </div>
+                        <div class="card-content" id="neuralContent">
+                            <div class="neural-patterns" id="neuralPatterns">
+                                <!-- Neural patterns will be populated here -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Cryptographic Fingerprint -->
+                    <div class="result-card" id="cryptoFingerprint">
+                        <div class="card-header">
+                            <h3>🔐 Cryptographic Fingerprint</h3>
+                            <div class="confidence-indicator" id="cryptoConfidence"></div>
+                        </div>
+                        <div class="card-content" id="cryptoContent">
+                            <div class="fingerprint-visual" id="fingerprintVisual">
+                                <!-- Fingerprint visualization will be populated here -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Statistical Analysis -->
+                    <div class="result-card" id="statisticalAnalysis">
+                        <div class="card-header">
+                            <h3>📈 Statistical Analysis</h3>
+                            <div class="confidence-indicator" id="statsConfidence"></div>
+                        </div>
+                        <div class="card-content" id="statsContent">
+                            <div class="stats-charts" id="statsCharts">
+                                <!-- Statistical charts will be populated here -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Human-friendly Explanation -->
+                    <div class="result-card" id="resultExplanation">
+                        <div class="card-header">
+                            <h3>🧾 Human-friendly Explanation</h3>
+                            <div class="confidence-indicator medium" id="explainConfidence"></div>
+                        </div>
+                        <div class="card-content" id="resultExplanationContent">
+                            <!-- Narrative explanation will be typed here -->
+                        </div>
+                    </div>
+                    
+                    <!-- Blockchain & Crypto Detection -->
+                    <div class="result-card" id="blockchainAnalysis">
+                        <div class="card-header">
+                            <h3>⛓️ Blockchain & Crypto Detection</h3>
+                            <div class="confidence-indicator" id="blockchainConfidence"></div>
+                        </div>
+                        <div class="card-content" id="blockchainContent">
+                            <div class="blockchain-results" id="blockchainResults">
+                                <!-- Blockchain analysis will be populated here -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Transformation Lab -->
+                    <div class="result-card" id="transformationLab">
+                        <div class="card-header">
+                            <h3>🔄 Transformation Lab</h3>
+                            <div class="confidence-indicator" id="transformConfidence"></div>
+                        </div>
+                        <div class="card-content" id="transformContent">
+                            <div class="transform-results" id="transformResults">
+                                <!-- Transformation results will be populated here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Advanced Example Gallery -->
+            <div class="examples-gallery">
+                <h3>🎨 Advanced Test Cases</h3>
+                <div class="example-categories">
+                    <div class="category">
+                        <h4>🔐 Classic Hashes</h4>
+                        <div class="example-buttons">
+                            <button class="example-btn" data-example="5d41402abc4b2a76b9719d911017c592" data-type="MD5">MD5</button>
+                            <button class="example-btn" data-example="a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3" data-type="SHA256">SHA256</button>
+                            <button class="example-btn" data-example="$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewdBPj4J/HS.s.2" data-type="bcrypt">bcrypt</button>
+                        </div>
+                    </div>
+                    <div class="category">
+                        <h4>🚀 Modern Crypto</h4>
+                        <div class="example-buttons">
+                            <button class="example-btn" data-example="1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa" data-type="Bitcoin">Bitcoin Address</button>
+                            <button class="example-btn" data-example="0x742d35Cc6634C0532925a3b8D0C4e4C4C4C4C4C4" data-type="Ethereum">Ethereum Address</button>
+                            <button class="example-btn" data-example="QmYwAPJzv5CZsnA625s3Xf2nemtYgPpHdWEz79ojWnPbdG" data-type="IPFS">IPFS Hash</button>
+                        </div>
+                    </div>
+                    <div class="category">
+                        <h4>🔬 Advanced Patterns</h4>
+                        <div class="example-buttons">
+                            <button class="example-btn" data-example="U2FsdGVkX1+vupppZksvRf5pq5g5XjFRlipRkwB0K1Y=" data-type="AES">AES Encrypted</button>
+                            <button class="example-btn" data-example="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9" data-type="JWT">JWT Token</button>
+                            <button class="example-btn" data-example="-----BEGIN PGP MESSAGE-----" data-type="PGP">PGP Message</button>
+                        </div>
+                    </div>
+                    <div class="category">
+                        <h4>🎯 Edge Cases</h4>
+                        <div class="example-buttons">
+                            <button class="example-btn" data-example="a1b2c3d4e5f6789012345678901234567890abcd" data-type="Random">Random Hex</button>
+                            <button class="example-btn" data-example="HelloWorld123!" data-type="Plain">Plain Text</button>
+                            <button class="example-btn" data-example="1234567890123456" data-type="Numeric">Numbers Only</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

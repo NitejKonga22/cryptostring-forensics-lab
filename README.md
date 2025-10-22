@@ -163,6 +163,6 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
-**Made with ❤️ and lots of ☕ by [Your Name]**
+**Made with ❤️ and lots of ☕ by Nitej Konga**
 
 *"In the digital shadows, every string tells a story..."*
